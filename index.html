@@ -18,6 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -98,42 +99,139 @@
           আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
           অন্য একটি Level এ
         </p>
-        <input
-          class="block border-gray-500 text-xl"
-          type="text"
-          name=""
-          id=""
-        />
-        <input
-          class="block border-gray-500 text-xl mt-7"
-          type="password"
-          name=""
-          id=""
-        />
         <button class="btn btn-primary">Get Started</button>
       </div>
       <div class="flex-1">
         <img src="./assets/hero-student.png" alt="" />
       </div>
     </section>
-    <section class="py-32 pb-64 text-center">
+    <!-- Lesson Section -->
+    <section class="py-32 text-center">
       <h1 class="font-bold text-5xl">
         <span class="text-sky-400">let's</span> Learn Vocabularies
       </h1>
-      <div
+      <section
         id="lessons-container"
         class="flex flex-wrap gap-3 mt-8 mx-auto justify-center"
-      ></div>
-      <div
+      ></section>
+
+      <!-- Search container -->
+      <section class="flex items-center justify-center pt-14 pb-8">
+        <div class="join">
+          <div>
+            <label class="input validator join-item">
+              <input type="text" id="input-search" placeholder="Search vocabularies" />
+            </label>
+          </div>
+          <button id="search-btn" class="btn btn-primary join-item">Search</button>
+        </div>
+      </section>
+
+      <!-- Spinner Container -->
+      <section
+        id="spiner"
+        class="flex items-center justify-center pt-14 pb-8 hidden"
+      >
+        <span class="loading loading-spinner text-primary"></span>
+      </section>
+
+      <!-- Words-Container -->
+      <section
         id="level-words-container"
         class="bg-gray-200 grid grid-cols-3 gap-8 justify-center items-center w-11/12 mx-auto mt-12 p-10 rounded-xl"
       >
         <div class="text-center col-span-full py-10 space-y-6 font-bangla">
-            <p class="">আপনি এখনো কোন Lesson Select করেন ন</p>
-            <h1 class="text-3xl font-medium">একটি Lesson Select করুন।</h1>
+          <p class="font-bangla">আপনি এখনো কোনো Lesson সিলেক্ট করেননি</p>
+          <h1 class="text-3xl font-medium font-bangla">একটি Lesson Select করুন।</h1>
+        </div>
+      </section>
+    </section>
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+    <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="detail-container" class="space-y-5"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <section class="px-16 py-20 flex gap-3 flex-col">
+      <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title font-semibold">
+          1. How can I start learning English on this website?
+        </div>
+        <div class="collapse-content text-sm">
+          You can start by exploring our beginner lessons, interactive
+          exercises, and quizzes. We also offer structured courses to guide you
+          step by step.
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">
+          Is this website free to use?
+        </div>
+        <div class="collapse-content text-sm">
+          Of Course This Website is free for every one bun if you want a premium
+          guidline you need to Pay. Otherwise go on 😊.
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">
+          Do I need to create an Account?
+        </div>
+        <div class="collapse-content text-sm">
+          Yes. We need to save your progress and inform you that a new lesson
+          has arrived.
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">
+          How can i build my English Vocabularies?
+        </div>
+        <div class="collapse-content text-sm">
+          By Learning and memorizing those vocabularies you can have a brife
+          knowledge of vocabularies.
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">
+          Do you offer certificates for completed course?
+        </div>
+        <div class="collapse-content text-sm">
+          Absoloutly. We provide a free and a paid certificate after completing
+          Our Course.
         </div>
       </div>
     </section>
+    <footer class="flex justify-between items-center p-14 px-16 bg-sky-100 border-t-gray-300 border-t-1">
+      <div class="space-y-3">
+        <div class="flex items-center gap-1">
+          <span>English</span>
+          <img src="./assets/logo.png" alt="" />
+          <span>জানালা</span>
+        </div>
+        <h1 class="font-bangla font-medium">ইংরেজি শিখুন সহজে</h1>
+        <p class="text-sm">Providing ED-Tech Applications since 2025</p>
+      </div>
+      <div>
+        <p class="mb-3">Follow Us</p>
+        <div class="space-x-2">
+          <i class="fa-brands fa-facebook text-2xl"></i>
+          <i class="fa-brands fa-youtube text-2xl"></i>
+          <i class="fa-brands fa-github text-2xl"></i>
+          <i class="fa-brands fa-instagram text-2xl"></i>
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
